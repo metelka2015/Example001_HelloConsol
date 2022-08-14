@@ -6,10 +6,6 @@ string? numberString = Console.ReadLine();
 
 int number = int.Parse(numberString);
 
-if(number < 1) Console.WriteLine("Ошибка. Введите целое число от 1 до 7");
-
-if(number > 7) Console.WriteLine("Ошибка. Введите целое число от 1 до 7");
-
 if(number == 1) Console.WriteLine("Понедельник");
 
 else if(number == 2) Console.WriteLine("Вторник");
@@ -22,5 +18,6 @@ else if(number == 5) Console.WriteLine("Пятница");
 
 else if(number == 6) Console.WriteLine("Суббота");
 
-else if(number == 7) Console.WriteLine("Воскречение");
+else if(number == 7) Console.WriteLine("Воскреcение");
 
+else Console.WriteLine("Неверный номер дня недели");
