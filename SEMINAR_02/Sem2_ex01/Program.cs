@@ -2,7 +2,7 @@
 //и показывает наибольшую цифру числа. 
 // 78-> 8, 12 -> 2, 85 -> 8
 
-var random = new Random();
+Random random = new Random();
 
 int randomNumber = random.Next(10, 99);
 
