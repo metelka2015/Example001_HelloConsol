@@ -15,14 +15,29 @@ int Factorial(int digit)
 
 }
 
-if (int.TryParse(Console.ReadLine()!, out var number))
+for (;;)
 {
-    if (number >= 0)
+    Console.WriteLine("Введите положительное число: ");
+    Console.WriteLine("Для выхода нажмите Y");
+    
+    var inputString = Console.ReadLine();
+
+    if (inputString.Equals("Y"))
+        break; //выход из цикла, return - выход из программы.
+
+    if (int.TryParse(inputString, out var number))
     {
+        if (number < 0)
+        {
+            Console.WriteLine("Число должно быть неотрицательным");
+            continue; // опеатор, который продолжает работы цикла, перебрасывая на следующую операцию цикла. 
+        }
         int result = Factorial(number);
         Console.WriteLine($"{number}! = {result}");
     }
-    else Console.WriteLine("Введите положительное число");
+
+    else Console.WriteLine("Введено не число!");
+
 }
-else Console.WriteLine("Введено не число!");
+
 
